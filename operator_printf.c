@@ -11,10 +11,8 @@
 int operator_printf(char s_type, va_list list)
 {
     f_type operator[] = {
-		{'c', f_char},
+        {'c', print_char},
         {'s', f_string},
-        {'d', f_decimal}
-		{'i', f_int},
-        {'\0', 0}
-	};
+        {'d', f_decimal} {'i', f_int},
+        {'\0', 0}};
 }

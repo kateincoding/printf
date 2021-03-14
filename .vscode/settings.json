@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "holberton.h": "c"
+    "holberton.h": "c",
+    "stdarg.h": "c"
   }
 }
