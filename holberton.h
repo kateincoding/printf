@@ -1,24 +1,22 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
-// #include "std_library.h"
+#include "f_library/std_library.h"
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
-// #include <unistd.h>
+
 /**
  * struct Ftype - Struct operator
  *
  * @c: Parameter char (%s, %c, %i, ...)
  * @f: The function associated
  */
-
 typedef struct Ftype
 {
 	char *c;
 	void (*f)(va_list);
 } ftype;
-
 typedef struct Ftype f_type;
 
 /* main functions */
