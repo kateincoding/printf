@@ -1,6 +1,7 @@
-#ifndef HOLBERTON_H
-# define HOLBERTON_H
+#ifndef LIB_PRINTF_H
+# define LIB_PRINTF_H
 
+#include "f_library/std_library.h"
 #include <stdlib.h>
 #include <stdarg.h>
 
@@ -21,8 +22,8 @@ typedef struct Ftype f_type;
 
 /* main functions */
 int _printf(const char *format, ...);
+int operator_printf(char s_type, va_list list);
 
-/*aux fx from library*/
-int _putchar(char c);
+/* functions from standar library in f_library like putchar and others*/
 
 #endif

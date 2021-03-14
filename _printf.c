@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "lib_printf.h"
 
 /**
  * _printf - Simulates the printf function
@@ -18,6 +18,8 @@ int _printf(const char *format, ...)
 	{
         if (format[i] != '%')
             _putchar(format[i]);
+		else
+			
         i++;
     }
 }
