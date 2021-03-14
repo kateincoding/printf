@@ -1,4 +1,6 @@
-#include "lib_printf.h"
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _printf - Simulates the printf function
@@ -18,7 +20,7 @@ int _printf(const char *format, ...)
         if (format[i] != '%')
             _putchar(format[i]);
 		else
-
+			/*functions that search in structured list the operator and returns the function */
         i++;
     }
 }
