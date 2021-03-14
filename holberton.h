@@ -19,6 +19,10 @@ typedef struct Ftype
 
 typedef struct Ftype f_type;
 
+/* main functions */
 int _printf(const char *format, ...);
+
+/*aux fx from library*/
+int _putchar(char c);
 
 #endif
