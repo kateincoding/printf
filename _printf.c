@@ -5,7 +5,6 @@
  * @format: Format to print to the console
  * Return: number of char printed
  */
-
 int _printf(const char *format, ...)
 {
     unsigned int i,
@@ -19,7 +18,7 @@ int _printf(const char *format, ...)
         if (format[i] != '%')
             _putchar(format[i]);
 		else
-			
+
         i++;
     }
 }
