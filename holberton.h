@@ -23,9 +23,10 @@ typedef struct Ftype f_type;
 /* main functions */
 int _printf(const char *format, ...);
 int operator_printf(char s_type, va_list list);
-int _putchar(char c);
 int putN(unsigned int n, unsigned int b, char *nums)
 
 /* functions from standar library in f_library like putchar and others*/
+int _putchar(char c);
+int _strlen(char *s);
 
 #endif
