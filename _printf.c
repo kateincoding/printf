@@ -22,13 +22,15 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			if (format[i] == '\0')
-				return (-1);
-			else if (format[i] == '%')
+			/*if (format[i] == '\0')
+				return (result); */
+			if (format[i] == '%')
 				result += _putchar(format[i]);
-			else
+			else if (format [i] == 'c' || format [i] == 's' || format [i] == 'd' || format [i] == 'i')
 				/*functions that search in structured list the operator and returns the function */
 				result += select_function(format[i], list);
+			else
+				i--;
 		}
         i++;
     }
