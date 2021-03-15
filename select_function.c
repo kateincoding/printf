@@ -15,7 +15,7 @@ int select_function(char format, va_list list)
     /*  {'%', print_percent},*/
         {'d', print_unsigned},
 		{'i', print_int},
-        {NULL, NULL}
+        {'\0', NULL}
 	};
     while(operator[i].c)
     {
