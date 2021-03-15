@@ -17,4 +17,4 @@ int operator_printf(char s_type, va_list list)
 		{'i', f_int},
         {'\0', 0}
 	};
-}
+}   
