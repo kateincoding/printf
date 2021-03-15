@@ -18,7 +18,7 @@
 typedef struct Ftype
 {
 	char c;
-	void (*f)(va_list);
+	int (*f)(va_list);
 } ftype;
 typedef struct Ftype f_type;
 
@@ -26,10 +26,11 @@ typedef struct Ftype f_type;
 int _printf(const char *format, ...);
 int operator_printf(char s_type, va_list list);
 
-/* print functions */
+/* print functions : type char */
 int print_char(va_list lista);
 int print_str(va_list lista);
 int print_percent(va_list lista);
+/* print functions : type numbers */
 int putN(unsigned int n, unsigned int b, char *nums);
 int print_int(va_list lista);
 int print_unsigned(va_list lista);
