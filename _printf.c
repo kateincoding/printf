@@ -23,10 +23,9 @@ int _printf(const char *format, ...)
 				return (-1);
 			if (format[i] == '%')
 				result += _putchar(format[i]);
-			result += operator_printf(format[i], list);
-		}
 			/*functions that search in structured list the operator and returns the function */
-			/*step2: call the value with write(0) from fx and returned*/
+			result += select_function(format[i], list);
+		}
         i++;
     }
 	va_end(list);

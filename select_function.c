@@ -5,7 +5,7 @@
  * @s_type: string with operators
  * @list: list of arguments to print
  */
-int operator_printf(char format, va_list list)
+int select_function(char format, va_list list)
 {
     unsigned int i = 0, result = 0;
 

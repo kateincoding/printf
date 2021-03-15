@@ -22,7 +22,7 @@ typedef struct Ftype f_type;
 
 /* main functions */
 int _printf(const char *format, ...);
-int operator_printf(char s_type, va_list list);
+int select_function(char format, va_list list);
 
 /* print functions : type char */
 int print_char(va_list lista);
