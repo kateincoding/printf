@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-/* Octavio, porfis completa la lista con los operadores que el proyecto nos pide
+/* Octavio, porfis cambia el nombre de las fx en base a las fx que estas creando
 */
 
 /**
@@ -23,8 +23,10 @@ int operator_printf(char format, va_list list)
     {
         if (format == operator[i].c)
         {
-            operator[i].f(list);
-            result++;
+            result += operator[i].f(list);
+            break;
         }
+        i++;
     }
+    return (result);
 }
