@@ -21,10 +21,11 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0')
 				return (-1);
-			if (format[i] == '%')
+			else if (format[i] == '%')
 				result += _putchar(format[i]);
-			/*functions that search in structured list the operator and returns the function */
-			result += select_function(format[i], list);
+			else
+				/*functions that search in structured list the operator and returns the function */
+				result += select_function(format[i], list);
 		}
         i++;
     }
