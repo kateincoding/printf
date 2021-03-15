@@ -9,7 +9,8 @@ int print_char(va_list lista)
 {
   /*va_arg (va_list ap, type)*/
   _putchar(va_arg(lista, int));
-  return (1); //returning true
+  return (1);
+  /* returning true */
 }
 
 /**
