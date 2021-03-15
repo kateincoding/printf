@@ -14,9 +14,10 @@ int operator_printf(char format, va_list list)
 
     f_type operator[] = {
         {'c', print_char},
-        {'s', f_string},
-        {'d', f_decimal}
-		{'i', f_int},
+        {'s', print_str},
+        {'%', print_percent},
+        {'d', print_unsigned},
+		{'i', print_int},
         {'\0', 0}
 	};
     while(operator[i].c)

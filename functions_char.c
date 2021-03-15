@@ -51,6 +51,8 @@ int print_str(va_list lista)
 */
 int print_percent(va_list lista)
 {
+  void lista;
+  
   write(1, "%%", 1);
   return (1);
 }

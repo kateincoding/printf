@@ -7,7 +7,7 @@
 
 #include <unistd.h>
 
-#define INT_MAX 2147483647
+/* #define INT_MAX 2147483647 */
 
 /**
  * struct Ftype - Struct operator
@@ -25,7 +25,14 @@ typedef struct Ftype f_type;
 /* main functions */
 int _printf(const char *format, ...);
 int operator_printf(char s_type, va_list list);
+
+/* print functions */
+int print_char(va_list lista);
+int print_str(va_list lista);
+int print_percent(va_list lista);
 int putN(unsigned int n, unsigned int b, char *nums);
+int print_int(va_list lista);
+int print_unsigned(va_list lista);
 
 /* functions from standar library in f_library like putchar and others*/
 int _putchar(char c);
