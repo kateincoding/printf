@@ -15,7 +15,7 @@
  */
 typedef struct Ftype
 {
-	char *c;
+	char c;
 	void (*f)(va_list);
 } ftype;
 typedef struct Ftype f_type;
