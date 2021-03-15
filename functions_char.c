@@ -5,7 +5,6 @@
 *@lista: the main string passed to the function
 *Return: An integer
 */
-
 int print_char(va_list lista)
 {
   /*va_arg (va_list ap, type)*/
@@ -18,10 +17,10 @@ int print_char(va_list lista)
 *@lista: the main string passed to the function
 *Return: An integer
 */
-
 int print_str(va_list lista)
 {
-  unsigned int count = 0; //Can´t be negative
+  unsigned int count = 0;
+  /*Can´t be negative*/
 
   char *str = va_arg(lista, char *);
 

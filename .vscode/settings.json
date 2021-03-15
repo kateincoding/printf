@@ -1,7 +1,0 @@
-{
-  "files.associations": {
-    "holberton.h": "c",
-    "stdarg.h": "c",
-    "unistd.h": "c"
-  }
-}

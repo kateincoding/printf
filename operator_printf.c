@@ -1,8 +1,5 @@
 #include "holberton.h"
 
-/* Octavio, porfis cambia el nombre de las fx en base a las fx que estas creando
-*/
-
 /**
  * select_operator - structured list to work with it
  * @s_type: string with operators
