@@ -15,7 +15,7 @@ int operator_printf(char format, va_list list)
     f_type operator[] = {
         {'c', print_char},
         {'s', print_str},
-        {'%', print_percent},
+    /*    {'%', print_percent},*/
         {'d', print_unsigned},
 		{'i', print_int},
         {'\0', 0}

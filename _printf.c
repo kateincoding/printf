@@ -18,7 +18,12 @@ int _printf(const char *format, ...)
             result += _putchar(format[i]);
 		else
 		{
-			result += operator_printf(format[++i], list);
+			i++;
+			if (format[i] == '\0')
+				return (-1);
+			if (format[i] == '%')
+				result += _putchar(format[i]);
+			result += operator_printf(format[i], list);
 		}
 			/*functions that search in structured list the operator and returns the function */
 			/*step2: call the value with write(0) from fx and returned*/

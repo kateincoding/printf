@@ -48,9 +48,10 @@ int print_str(va_list lista)
 *print_percent - print a char at printf
 *@lista: the main string passed to the function
 *Return: An integer
-*/
+*
 int print_percent(va_list lista)
 {
   write(1, "%%", 1);
   return (1);
 }
+*/

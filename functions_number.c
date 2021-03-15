@@ -33,8 +33,8 @@ int print_unsigned(va_list lista)
 {
   unsigned int i = va_arg(lista, unsigned int);
   int count = 0;
-
-  i = (unsigned int)INT_MAX + 1024;
+  
+  /*i = INT_MAX + 1024; */
 
   count += putN(i, 10, "0123456789");
   return (count);
