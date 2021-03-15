@@ -11,7 +11,7 @@ i -> otro archivo (1 fx)
 int f_char(va_list list)
 {
 	char c = va_arg(list, int);
-	putchar (c);
+	_putchar (c);
 
     return (1);
 }

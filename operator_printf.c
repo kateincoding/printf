@@ -23,7 +23,7 @@ int operator_printf(char format, va_list list)
     {
         if (format == operator[i].c)
         {
-            result += operator[i].f(list);
+            result =+ operator[i].f(list);
             break;
         }
         i++;
