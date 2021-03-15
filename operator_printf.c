@@ -8,8 +8,10 @@
  * @s_type: string with operators
  * @list: list of arguments to print
  */
-int operator_printf(char s_type, va_list list)
+int operator_printf(char format, va_list list)
 {
+    unsigned int i = 0, result = 0;
+
     f_type operator[] = {
         {'c', print_char},
         {'s', f_string},
@@ -17,4 +19,12 @@ int operator_printf(char s_type, va_list list)
 		{'i', f_int},
         {'\0', 0}
 	};
+    while(operator[i].c)
+    {
+        if (format == operator[i].c)
+        {
+            operator[i].f(list);
+            result++;
+        }
+    }
 }
