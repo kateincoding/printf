@@ -14,12 +14,19 @@ int main(void)
     unsigned int ui;
     void *addr;
 
-    len = _printf("h_ %% %% %\0 h_\n");
-    len2 = printf("ho %% %% %\0 h2\n");
+    printf("-------CHAR CASES------");
+    _printf("h_ %% %% %\n 1 %\0 h_\n");
+    _printf("\n");
+    printf("ho %% %% %\n 1 %\0 h2\n");
+    _printf("\n");
+    printf("\n-------MAIN STARTED------\n");
+    len = _printf("h_ %% %% %\n 1 %\0 h_\n");
+    len2 = printf("ho %% %% %\n 1 %\0 h2\n");
     ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
     _printf("Length_:[%d, %i]\n", len, len);
     printf("Length2:[%d, %i]\n", len2, len2);
+     printf("\n-------NEGATIVE NUMBER------\n");
     _printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
     _printf("Unsigned:[%u]\n", ui);
