@@ -13,7 +13,7 @@
  * @c: Parameter char (%s, %c, %i, ...)
  * @f: The function associated
  */
-typedef struct Ftype
+struct Ftype
 {
 	char c;
 	int (*f)(va_list);

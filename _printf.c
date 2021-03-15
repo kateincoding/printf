@@ -10,6 +10,9 @@ int _printf(const char *format, ...)
     unsigned int i = 0, result = 0;
     va_list list;
 
+	if (format == NULL)
+		return(-1);
+
     va_start(list, format);
     
     while (format && format[i])
