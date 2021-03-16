@@ -10,10 +10,76 @@
 int main(void)
 {
     int len;
-    int len2;
+    int len1, len2;
     unsigned int ui;
     void *addr;
 
+  len1 = printf("Hello %s", "");
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %s", "");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %s ... ", "...");
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %s ... ", "...");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %s ... ", NULL);
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %s ... ", NULL);
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %s ... ", NULL);
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %s ... ", NULL);
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %s ... ", "...");
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %s ... ", "...");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %s ... ", "Holberton");
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %s ... ", "Holberton");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %c %c %c %c %c", 'H', 'l', 'b', 't', 'n');
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %c %c %c %c %c", 'H', 'l', 'b', 't', 'n');
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %%");
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %%");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Unknown:[%s]", "\0");
+  printf(" => %d\n", len1);
+  len2 = _printf("Unknown:[%s]", "\0");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Unknown:[%s] %s", "");
+  printf(" => %d\n", len1);
+  len2 = _printf("Unknown:[%s] %s", "");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf(NULL, "");
+  printf(" => %d\n", len1);
+  len2 = _printf(NULL, "");
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("*", NULL);
+  printf(" => %d\n", len1);
+  len2 = _printf("*", NULL);
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+  len1 = printf("Hello %c", '\0', 'l', 'b', 't', 'n');
+  printf(" => %d\n", len1);
+  len2 = _printf("Hello %c", '\0', 'l', 'b', 't', 'n');
+  printf(" => %d\n", len2);
+  printf("Correct: %d\n\n", len1 == len2);
+/*
     printf("-------CHAR CASE percent y n ------\n");
     len = _printf("h_ %% %% jnd%       jjjh hhh\n");
     len2 = printf("ho %% %% jnd%       jjjh hhh\n");
@@ -27,7 +93,7 @@ int main(void)
 	len = _printf("h_ %% %% jnd%%%%%       h hhh\n");
 	len2 = printf("ho %% %% jnd%%%%%       h hhh\n");
     printf("Length2:[_printf:%d, printf:%d]\n", len, len2);
-
+*/
     printf("-------MAIN STARTED------\n");
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
