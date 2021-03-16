@@ -31,9 +31,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(list, format);
-
 	while (format && format[i])
 	{
 		if (format[i] != '%')
@@ -46,9 +44,7 @@ int _printf(const char *format, ...)
 			while (format[i] == ' ')
 				i++;
 			if (format[i] == '%')
-			{
 				result += _putchar(format[i]);
-			}
 			else if (validate_operator(format[i]) == 0)
 			{
 				result += _putchar('%');
@@ -57,7 +53,6 @@ int _printf(const char *format, ...)
 				result += _putchar(format[i]);
 			}
 			else
-				/*functions that search in structured list the operator and returns the function */
 				result += select_function(format[i], list);
 		}
 		i++;

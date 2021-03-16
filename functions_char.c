@@ -7,10 +7,10 @@
 */
 int print_char(va_list lista)
 {
-  /*va_arg (va_list ap, type)*/
-  _putchar(va_arg(lista, int));
-  return (1);
-  /* returning true */
+	/*va_arg (va_list ap, type)*/
+	_putchar(va_arg(lista, int));
+	return (1);
+	/* returning true */
 }
 
 /**
@@ -20,34 +20,27 @@ int print_char(va_list lista)
 */
 int print_str(va_list lista)
 {
-  unsigned int count = 0;
-  /*Can´t be negative*/
+	unsigned int count = 0;
+	/*Can´t be negative*/
 
-  char *str = va_arg(lista, char *);
+	char *str = va_arg(lista, char *);
 
-  if (!str)
-  {
-    /*
-    char s[] = "(null)";
-    int i = 0;
-    
-    while (*s)
-      _putchar(s[i++]); */
-    _putchar('(');
-    _putchar('n');
-    _putchar('u');
-    _putchar('l');
-    _putchar('l');
-    _putchar(')');
-    return (6);
-  }
-
-  while (*str)
-  {
-    write(1, &(*str++), 1);
-    count++;
-  }
-  return (count);
+	if (!str)
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+		return (6);
+	}
+	while (*str)
+	{
+		write(1, &(*str++), 1);
+		count++;
+	}
+	return (count);
 }
 
 
@@ -59,6 +52,6 @@ int print_str(va_list lista)
 */
 int print_percent(__attribute__((unused)) va_list lista)
 {
-  write(1, "%%", 1);
-  return (1);
+	write(1, "%%", 1);
+	return (1);
 }
