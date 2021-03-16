@@ -13,12 +13,14 @@ int select_function(char format, va_list list)
 	f_type operator[] = {
 		{'c', print_char},
 		{'s', print_str},
-		{'%', print_percent},
 		{'d', print_int},
 		{'i', print_int},
 		{'u', print_unsigned},
 		{'o', print_octal},
+		{'x', print_hexa},
+		{'X', print_HEXA},
 		{'b', print_bin},
+	/*	{'%', print_percent}, */
 		{'\0', NULL}};
 	while (operator[i].c)
 	{
