@@ -2,7 +2,7 @@
 
 int validate_operator(char format)
 {
-	char operator[] = {'c', 's', 'd', 'i', 'R', '%'};
+	char operator[] = {'c', 's', 'd', 'i', 'R', '%', '\0'};
 	int i = 0;
 
 	while (operator[i])
@@ -38,17 +38,19 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0')
 				return (result);
-			else if (format[i] == ' ')
+			while (format[i] == ' ')
 				i++;
-			else if (format[i] == '%')
+			if (format[i] == '%')
 				result += _putchar(format[i]);
-			else if (validate_operator(format[i]) == 1)
+			while(validate_operator(format[i]) == 0 && format[i] != '\n')
+				i++;
+			if(validate_operator(format[i]) == 1)
+			{
 				/*functions that search in structured list the operator and returns the function */
 				result += select_function(format[i], list);
-			else
-			{
-				result += _putchar(format[i]);
 			}
+			else
+				result += _putchar(format[i]);
 		}
         i++;
     }
