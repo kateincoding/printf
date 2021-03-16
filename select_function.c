@@ -11,17 +11,15 @@ int select_function(char format, va_list list)
 	unsigned int i = 0, result = 0;
 
 	f_type operator[] = {
-		{'c', print_char},
-		{'s', print_str},
-		{'d', print_int},
-		{'i', print_int},
-		{'u', print_unsigned},
-		{'o', print_octal},
-		{'b', print_bin},
-		{'r', print_rev_str},
-		{'R', print_rot13},
-		{'\0', NULL}};
-
+			{'c', print_char},
+			{'s', print_str},
+			{'%', print_percent},
+			{'d', print_int},
+			{'i', print_int},
+			{'b', print_bin},
+			{'u', print_unsigned},
+			{'o', print_octal},
+			{'\0', NULL}};
 	while (operator[i].c)
 	{
 		if (format == operator[i].c)
