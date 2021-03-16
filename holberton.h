@@ -39,6 +39,5 @@ int print_octal(va_list lista);
 
 /* functions from standar library in f_library like putchar and others*/
 int _putchar(char c);
-int _strlen(char *s);
 
 #endif
