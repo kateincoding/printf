@@ -40,3 +40,10 @@ int print_octal(va_list lista)
  *
  * Return: The number of digits printed
  */
+void print_hex(int n)
+{
+	char hex_digits[] = "0123456789abcdef";
+	if (n >= 16)
+		print_hex(n / 16);
+	write(1, &hex_digits[n % 16], 1);
+}
