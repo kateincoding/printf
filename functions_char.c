@@ -23,17 +23,24 @@ int print_str(va_list lista)
   unsigned int count = 0;
   /*Can´t be negative*/
 
-  char *str = va_arg(lista, char *);
+	char *str = va_arg(lista, char *);
+	int i = 0;
 
-  if (!str)
+	if (!str)
+		return (_putchar(str[i]));
+
+  if (str = 'NULL')
   {
     char *s = "(null)";
 
     str = s;
-
+	
     while (*s)
-      write(1, &(*s++), 1);
-    return (1);
+	{
+		write(1, &(*s++), 1);
+		count++;
+	}
+    return (count);
   }
 
   while (*str)
