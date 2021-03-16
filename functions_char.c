@@ -53,7 +53,7 @@ int print_rev_str(va_list lista)
 	char *s = va_arg(lista, char *);
 
 	if (!s)
-		s = "(null)";
+		s = ")Null(";
 
 	length = _strlen(s);
 	while (--length >= 0)
