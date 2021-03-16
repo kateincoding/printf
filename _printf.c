@@ -42,15 +42,16 @@ int _printf(const char *format, ...)
 				i++;
 			if (format[i] == '%')
 				result += _putchar(format[i]);
-			while(validate_operator(format[i]) == 0 && format[i] != '\n')
-				i++;
-			if(validate_operator(format[i]) == 1)
+			if(validate_operator(format[i]) == 0)
 			{
-				/*functions that search in structured list the operator and returns the function */
-				result += select_function(format[i], list);
+				result += _putchar('%');
+				if (format[i-1] == ' ')
+					result += _putchar(' ');
+				result += _putchar(format[i]);
 			}
 			else
-				result += _putchar(format[i]);
+			/*functions that search in structured list the operator and returns the function */
+				result += select_function(format[i], list);
 		}
         i++;
     }
