@@ -11,14 +11,10 @@ int main(void)
 {
     int len;
     int len2;
-    unsigned int ui;
-    void *addr;
 
     printf("-------MAIN STARTED------\n");
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
     _printf("Length_:[%d, %i]\n", len, len);
     printf("Length2:[%d, %i]\n", len2, len2);
     printf("\n-------CHARACTER------\n");
@@ -26,18 +22,17 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
     printf("\n-------PERCENT------\n");
     len = _printf("Percent:[%%]\n");
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
+
     printf("\n-------REVERSE STRING------\n");
-    _printf("Unknown_:[%r]\n", "hOLAc ");
-    printf("Unknowno:[%r]\n", "hOLAo ");
-    _printf("Unknown_:[%r]\n");
-    printf("Unknowno:[%r]\n");
+	_printf("Unknown_:[%r]\n", "hOLAc ");
+	_printf("Unknown_:[%r]\n");
+	_printf("Unknown_:[%r]\n", NULL);
+
     printf("\n-------ROT13------\n");
     _printf("Unknown:[%R]\n", "ABCDabcdA");
     printf("Unknown:[%R]\n", "ABCDabcdA");

@@ -50,12 +50,10 @@ int print_str(va_list lista)
 int print_rev_str(va_list lista)
 {
 	int length;
-	char *s; 
-	
-	s = va_arg(lista, char *);
+	char *s = va_arg(lista, char *);
 
 	if (!s)
-		s = ")Null(";
+		s = "(null)";
 
 	length = _strlen(s);
 	while (--length >= 0)
