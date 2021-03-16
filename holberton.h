@@ -36,8 +36,6 @@ int print_int(va_list lista);
 int print_bin(va_list lista);
 int print_unsigned(va_list lista);
 int print_octal(va_list lista);
-int print_hexa(va_list lista);
-int print_HEXA(va_list lista);
 
 /* functions from standar library in f_library like putchar and others*/
 int _putchar(char c);

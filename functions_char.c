@@ -21,11 +21,10 @@ int print_char(va_list lista)
 int print_str(va_list lista)
 {
 	unsigned int count = 0;
-	/*Can´t be negative*/
 
 	char *str = va_arg(lista, char *);
 
-	if (!str)
+	if (!str || str == NULL)
 	{
 		_putchar('(');
 		_putchar('n');

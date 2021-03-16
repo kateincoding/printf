@@ -33,9 +33,9 @@ int print_octal(va_list lista)
 	}
 	return (c);
 }
-
+/*
 int print_hexa(va_list lista)
 {}
 
 int print_HEXA(va_list lista)
-{}
+{}   */

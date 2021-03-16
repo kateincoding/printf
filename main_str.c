@@ -1,3 +1,6 @@
+#include <limits.h>
+#include <stdio.h>
+#include "holberton.h"
 /**
  * main - Entry point
  *
@@ -7,8 +10,6 @@ int main(void)
 {
     int len;
     int len1, len2;
-    unsigned int ui;
-    void *addr;
 
   len1 = printf("Hello %s", "");
   printf(" => %d\n", len1);
@@ -75,7 +76,7 @@ int main(void)
   len2 = _printf("Hello %c", '\0', 'l', 'b', 't', 'n');
   printf(" => %d\n", len2);
   printf("Correct13: %d\n\n", len1 == len2);
-/*
+
     printf("-------CHAR CASE percent y n ------\n");
     len = _printf("h_ %% %% jnd%       jjjh hhh\n");
     len2 = printf("ho %% %% jnd%       jjjh hhh\n");
@@ -89,6 +90,6 @@ int main(void)
 	len = _printf("h_ %% %% jnd%%%%%       h hhh\n");
 	len2 = printf("ho %% %% jnd%%%%%       h hhh\n");
     printf("Length2:[_printf:%d, printf:%d]\n", len, len2);
-*/
+
     return (0);
 }
