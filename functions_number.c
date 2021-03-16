@@ -39,21 +39,3 @@ int print_unsigned(va_list lista)
   count += putN(n, 10, "0123456789");
   return (count);
 }
-
-/**
-*putN - Put numbers with recursion as chars
-*@n: the main string passed to the function
-*@b: the main string passed to the function
-*@nums: the main string passed to the function
-*Return: An integer
-*/
-int putN(unsigned int n, unsigned int b, char *nums)
-{
-  int r = 1;
-
-  if (n >= b)
-    r += putN(n / b, b, nums);
-
-  write(1, &nums[n % b], 1);
-  return (r);
-}
