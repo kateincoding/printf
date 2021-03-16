@@ -12,7 +12,7 @@ int select_function(char format, va_list list)
     f_type operator[] = {
         {'c', print_char},
         {'s', print_str},
-        /*  {'%', print_percent},*/
+        {'%', print_percent},
         {'d', print_int},
         {'i', print_int},
         {'u', print_unsigned},

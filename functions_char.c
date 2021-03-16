@@ -56,9 +56,9 @@ int print_str(va_list lista)
 *@lista: the main string passed to the function
 *Return: An integer
 *
-int print_percent(va_list lista)
+*/
+int print_percent(__attribute__((unused)) va_list lista)
 {
   write(1, "%%", 1);
   return (1);
 }
-*/

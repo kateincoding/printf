@@ -5,10 +5,10 @@
 *@lista: the main string passed to the function
 *Return: An integer
 */
-int print_int(va_list vi)
+int print_int(va_list lista)
 {
   int x, bit, d, o, n, c = 0;
-  n = va_arg(vi, int);
+  n = va_arg(lista, int);
   o = n % 10;
   n = n / 10;
   if (o < 0)
@@ -43,7 +43,7 @@ int print_int(va_list vi)
 
 /**
 * print_unsigned - Convert a number into an unsigned int and print it
-* @un: The number to be converted
+* @lista: The number to be converted
 *
 * Return: The number of digits printed
 */
@@ -69,40 +69,6 @@ int print_unsigned(va_list lista)
       div /= 10;
       c++;
     }
-  }
-  return (c);
-}
-
-/**
- * print_octal - Converts a decimal num passed to the argument to an octal
- * num
- * @oct: The num to be converted
- * Return: c of digit in octal num
- */
-int print_octal(va_list oct)
-{
-  unsigned int num, c = 0, index = 0;
-  int arr[100];
-
-  num = va_arg(oct, int);
-  if (num < 9)
-  {
-    _putchar(num + '0');
-    c = 1;
-  }
-  else if (num >= 9)
-  {
-    while (num > 0)
-    {
-      arr[index] = num % 8;
-      num /= 8;
-      index++;
-    }
-  }
-  while (index--)
-  {
-    _putchar(arr[index] + '0');
-    c++;
   }
   return (c);
 }
