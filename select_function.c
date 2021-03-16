@@ -15,6 +15,7 @@ int select_function(char format, va_list list)
         {'%', print_percent},
         {'d', print_int},
         {'i', print_int},
+        {'b', print_bin},
         {'u', print_unsigned},
         {'o', print_octal},
 
