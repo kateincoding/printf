@@ -20,6 +20,7 @@ int select_function(char format, va_list list)
 		{'b', print_bin},
 	/*	{'%', print_percent}, */
 		{'\0', NULL}};
+
 	while (operator[i].c)
 	{
 		if (format == operator[i].c)
