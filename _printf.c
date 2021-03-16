@@ -1,5 +1,19 @@
 #include "holberton.h"
 
+int validate_operator(char format)
+{
+	char operator[] = {'c', 's', 'd', 'i', 'R', '%'};
+	int i = 0;
+
+	while (operator[i])
+	{
+		if (operator[i] == format)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 /**
  * _printf - Simulates the printf function
  * @format: Format to print to the console
@@ -25,19 +39,15 @@ int _printf(const char *format, ...)
 			if (format[i] == '\0')
 				return (result);
 			else if (format[i] == ' ')
-			{
-				result += _putchar('%');
-				return (result);
-			}
+				i++;
 			else if (format[i] == '%')
 				result += _putchar(format[i]);
-			else if (format [i] == 'c' || format [i] == 's' || format [i] == 'd' || format [i] == 'i')
+			else if (validate_operator(format[i]) == 1)
 				/*functions that search in structured list the operator and returns the function */
 				result += select_function(format[i], list);
 			else
 			{
-				result += _putchar('%');
-				return (result);
+				result += _putchar(format[i]);
 			}
 		}
         i++;
