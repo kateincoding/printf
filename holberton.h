@@ -39,7 +39,7 @@ int print_unsigned(va_list lista);
 /* print bases */
 int print_octal(va_list lista);
 int print_rot13(va_list lista);
-void print_hex(int n);
+int print_hex(int n);
 
 /* functions from standar library in f_library like putchar and others*/
 int _putchar(char c);
