@@ -29,10 +29,11 @@ int select_function(char format, va_list list);
 int print_char(va_list lista);
 int print_str(va_list lista);
 /* int print_percent(va_list lista); */
-
+int print_percent(va_list lista);
 /* print functions : type numbers */
 int putN(unsigned int n, unsigned int b, char *nums);
 int print_int(va_list lista);
+int print_bin(va_list lista);
 int print_unsigned(va_list lista);
 int print_octal(va_list lista);
 
