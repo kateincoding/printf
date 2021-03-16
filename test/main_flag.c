@@ -18,8 +18,8 @@ int main(void)
     _printf("Length_:[%d, %i]\n", len, len);
     printf("Length2:[%d, %i]\n", len2, len2);
     printf("\n-------CHARACTER------\n");
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
+    _printf("Char-acter:[%-8c][%-8d]\n", 'H', 2);
+    printf("Char#####acter:[%-8c][%.2u]\n", 'H', 3.567);
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
     printf("\n-------PERCENT------\n");

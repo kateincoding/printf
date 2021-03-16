@@ -61,3 +61,33 @@ int print_rev_str(va_list lista)
 	length = _strlen(s);
 	return (length);
 }
+
+/**
+* _print_String - Print a string
+* @arg: String address
+* Return: integer
+*/
+int print_Str_ASC(va_list arg)
+{
+
+	char *s = va_arg(arg, char *);
+	int c, i = 0;
+
+	if (s == NULL)
+		s = "(null)";
+
+	for (c = 0; s[c]; c++)
+	{
+		if (s[c] < 32 || s[c] >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+		}
+		else
+		{
+			_putchar(s[c]);
+			i++;
+		}
+	}
+	return (i);
+}
