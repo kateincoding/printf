@@ -46,8 +46,10 @@ int _printf(const char *format, ...)
 			while (format[i] == ' ')
 				i++;
 			if (format[i] == '%')
+			{
 				result += _putchar(format[i]);
-			if (validate_operator(format[i]) == 0)
+			}
+			else if (validate_operator(format[i]) == 0)
 			{
 				result += _putchar('%');
 				if (format[i - 1] == ' ')
