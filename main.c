@@ -15,8 +15,8 @@ int main(void)
     void *addr;
 
     printf("-------CHAR CASE percent y n ------\n");
-    len = _printf("h_ %% %% jnd%       jh _prjntf\n");
-    len2 = printf("ho %% %% jnd%       jh hhh\n");
+    len = _printf("h_ %% %% jnd%       h hhh\n");
+    len2 = printf("ho %% %% jnd%       h hhh\n");
     printf("Length2:[_printf:%d, printf:%d]\n", len, len2);
     printf("-------CHAR CASE percent + null ------\n");
     _printf("h_ %% %% jnd%\0 _printf\n");
