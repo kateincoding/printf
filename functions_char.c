@@ -23,25 +23,33 @@ int print_str(va_list lista)
   unsigned int count = 0;
   /*Can´t be negative*/
 
-	char *str = va_arg(lista, char *);
-	int i = 0;
+  char *str = va_arg(lista, char *);
 
-  if (str == NULL)
-    str = "(null)";
-	
-  if (str == '\0')
+  if (!str)
   {
-    _putchar('\0');
-    return (1);
+    /*
+    char s[] = "(null)";
+    int i = 0;
+    
+    while (*s)
+      _putchar(s[i++]); */
+    _putchar('(');
+    _putchar('n');
+    _putchar('u');
+    _putchar('l');
+    _putchar('l');
+    _putchar(')');
+    return (6);
   }
 
-  while (str[i])
-	{
-		_putchar(str[i++]);
-		count++;
-	}
-    return (count);
+  while (*str)
+  {
+    write(1, &(*str++), 1);
+    count++;
+  }
+  return (count);
 }
+
 
 /**
 *print_percent - print a char at printf
