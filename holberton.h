@@ -7,7 +7,7 @@
 #include <limits.h>
 
 /* #define INT_MAX 2147483647 */
-
+/*fff*/
 /**
  * struct Ftype - Struct operator
  *
