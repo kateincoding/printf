@@ -5,55 +5,104 @@
 *@lista: the main string passed to the function
 *Return: An integer
 */
-int print_int(va_list lista)
+int print_int(va_list vi)
 {
-  int n = va_arg(lista, int);
-  int count = 0;
-  unsigned int num;
-
-  if (n < 0)
+  int x, bit, d, o, n, c = 0;
+  n = va_arg(vi, int);
+  o = n % 10;
+  n = n / 10;
+  if (o < 0)
   {
-    write(1, "-", 1);
-    count++;
-    num = n * -1;
+    n = -n;
+    o = -o;
+    _putchar('-');
+    c++;
   }
-  else
-    num = n;
-
-  count += putN(num, 10, "0123456789");
-  return (count);
+  bit = n;
+  d = 1;
+  if (bit > 0)
+  {
+    while ((bit / 10) != 0)
+    {
+      bit = bit / 10;
+      d = d * 10;
+    }
+    while (d >= 1)
+    {
+      x = n / d;
+      _putchar(x + '0');
+      c++;
+      n = n % d;
+      d = d / 10;
+    }
+  }
+  _putchar(o + '0');
+  c++;
+  return (c);
 }
 
 /**
-*print_unsigned - print unsigned integers (conversion specifier u)
-*@lista: the main string passed to the function
-*Return: An integer
+* print_unsigned - Convert a number into an unsigned int and print it
+* @un: The number to be converted
+*
+* Return: The number of digits printed
 */
 int print_unsigned(va_list lista)
 {
-  unsigned int n = va_arg(lista, unsigned int);
-  int count = 0;
+  unsigned int num, c = 0, div;
 
-  n = (unsigned int)INT_MAX + 1024;
+  num = va_arg(lista, int);
 
-  count += putN(n, 10, "0123456789");
-  return (count);
+  if (num == 0)
+  {
+    _putchar('0');
+    c = 1;
+  }
+  if (num > 0)
+  {
+    for (div = 1; (num / div) > 9; div *= 10)
+      ;
+    while (div != 0)
+    {
+      _putchar((num / div) + '0');
+      num %= div;
+      div /= 10;
+      c++;
+    }
+  }
+  return (c);
 }
 
 /**
-*putN - Put numbers with recursion as chars
-*@n: the main string passed to the function
-*@b: the main string passed to the function
-*@nums: the main string passed to the function
-*Return: An integer
-*/
-int putN(unsigned int n, unsigned int b, char *nums)
+ * print_octal - Converts a decimal num passed to the argument to an octal
+ * num
+ * @oct: The num to be converted
+ * Return: c of digit in octal num
+ */
+int print_octal(va_list oct)
 {
-  int r = 1;
+  unsigned int num, c = 0, index = 0;
+  int arr[100];
 
-  if (n >= b)
-    r += putN(n / b, b, nums);
-
-  write(1, &nums[n % b], 1);
-  return (r);
+  num = va_arg(oct, int);
+  if (num < 9)
+  {
+    _putchar(num + '0');
+    c = 1;
+  }
+  else if (num >= 9)
+  {
+    while (num > 0)
+    {
+      arr[index] = num % 8;
+      num /= 8;
+      index++;
+    }
+  }
+  while (index--)
+  {
+    _putchar(arr[index] + '0');
+    c++;
+  }
+  return (c);
 }

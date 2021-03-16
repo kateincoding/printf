@@ -12,12 +12,14 @@ int select_function(char format, va_list list)
     f_type operator[] = {
         {'c', print_char},
         {'s', print_str},
-    /*  {'%', print_percent},*/
-        {'d', print_unsigned},
-		{'i', print_int},
-        {'\0', NULL}
-	};
-    while(operator[i].c)
+        /*  {'%', print_percent},*/
+        {'d', print_int},
+        {'i', print_int},
+        {'u', print_unsigned},
+        {'o', print_octal},
+
+        {'\0', NULL}};
+    while (operator[i].c)
     {
         if (format == operator[i].c)
         {
