@@ -58,5 +58,6 @@ int print_rev_str(va_list lista)
 	length = _strlen(s);
 	while (--length >= 0)
 		write(1, &s[length], 1);
+	length = _strlen(s);
 	return (length);
 }

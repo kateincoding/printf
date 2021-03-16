@@ -29,9 +29,14 @@ int main(void)
     printf("Len:[%d]\n", len2);
 
     printf("\n-------REVERSE STRING------\n");
-	_printf("Unknown_:[%r]\n", "hOLAc ");
-	_printf("Unknown_:[%r]\n");
-	_printf("Unknown_:[%r]\n", NULL);
+	len = _printf("Unknown_:[%r]\n", "\nhO&L$Ac\n");
+    _printf("Len:[%d]\n", len);
+    len = _printf("Len:[%d]\n", len);
+    _printf("Len:[%d]\n", len);
+	len = _printf("Unknown_:[%r]\n");
+    _printf("Len:[%d]\n", len);
+	len = _printf("Unknown_:[%r]\n", NULL);
+    _printf("Len:[%d]\n", len);
 
     printf("\n-------ROT13------\n");
     _printf("Unknown:[%R]\n", "ABCDabcdA");
