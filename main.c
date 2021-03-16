@@ -28,9 +28,11 @@ int main(void)
     _printf("\n");
     printf("ho %% %% % jnd%\0 h2\n");
     _printf("\n");
+
+
     printf("-------MAIN STARTED------\n");
-    len = _printf("hola\n");
-    len2 = printf("hola\n");
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
     _printf("Length_:[%d, %i]\n", len, len);
