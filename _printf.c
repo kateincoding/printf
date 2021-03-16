@@ -1,8 +1,13 @@
 #include "holberton.h"
 
+/**
+ * validate_operator - validate if it is an operator
+ * @format: Format to print to the console
+ * Return: 1 if is positive; 0 if is negative
+ */
 int validate_operator(char format)
 {
-	char operator[] = {'c', 's', 'd', 'i', 'R', '%', '\0'};
+	char operator[] = {'c', 's', 'd', 'i', 'R', '%'};
 	int i = 0;
 
 	while (operator[i])
@@ -47,7 +52,6 @@ int _printf(const char *format, ...)
 				result += _putchar('%');
 				if (format[i-1] == ' ')
 					result += _putchar(' ');
-				i++;
 				result += _putchar(format[i]);
 			}
 			else
