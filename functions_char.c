@@ -41,3 +41,24 @@ int print_str(va_list lista)
 	}
 	return (count);
 }
+
+/**
+*print_rev_str - function that prints the reverse of the string
+*@lista: args of printf to print
+*Return: numbers of char printed
+*/
+int print_rev_str(va_list lista)
+{
+	int length;
+	char *s; 
+	
+	s = va_arg(lista, char *);
+
+	if (!s)
+		s = ")Null(";
+
+	length = _strlen(s);
+	while (--length >= 0)
+		write(1, &s[length], 1);
+	return (length);
+}
