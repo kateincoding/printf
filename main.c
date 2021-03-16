@@ -13,7 +13,7 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
-
+/*
     printf("-------CHAR CASE percent y n ------\n");
     len = _printf("h_ %% %% jnd%       jjjh hhh\n");
     len2 = printf("ho %% %% jnd%       jjjh hhh\n");
@@ -27,7 +27,7 @@ int main(void)
 	len = _printf("h_ %% %% jnd%%%%%       h hhh\n");
 	len2 = printf("ho %% %% jnd%%%%%       h hhh\n");
     printf("Length2:[_printf:%d, printf:%d]\n", len, len2);
-
+*/
     printf("-------MAIN STARTED------\n");
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
