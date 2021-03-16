@@ -18,7 +18,6 @@ int select_function(char format, va_list list)
 		{'u', print_unsigned},
 		{'o', print_octal},
 		{'b', print_bin},
-	/*	{'%', print_percent}, */
 		{'\0', NULL}};
 
 	while (operator[i].c)

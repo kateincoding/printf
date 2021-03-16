@@ -41,11 +41,3 @@ int print_str(va_list lista)
 	}
 	return (count);
 }
-
-/* It is not necessary now */
-/**
-*print_percent - print a char at printf
-*@lista: the main string passed to the function
-*Return: An integer
-*
-*/
