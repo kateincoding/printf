@@ -26,29 +26,15 @@ int print_str(va_list lista)
 	char *str = va_arg(lista, char *);
 	int i = 0;
 
-	if (!str)
-		return (_putchar(str[i]));
-
-  if (str = 'NULL')
-  {
-    char *s = "(null)";
-
-    str = s;
+  if (str == 'NULL')
+    str = "(null)";
 	
-    while (*s)
+  while (str[i])
 	{
-		write(1, &(*s++), 1);
+		write(1, &(*str++), 1);
 		count++;
 	}
     return (count);
-  }
-
-  while (*str)
-  {
-    write(1, &(*str++), 1);
-    count++;
-  }
-  return (count);
 }
 
 /**
