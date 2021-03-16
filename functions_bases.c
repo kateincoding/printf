@@ -33,3 +33,10 @@ int print_octal(va_list lista)
 	}
 	return (c);
 }
+
+/**
+ * print_hex - Converts decimal to uppercase hexadecimal
+ * @n: The number to be converted
+ *
+ * Return: The number of digits printed
+ */
