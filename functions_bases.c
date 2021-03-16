@@ -33,3 +33,44 @@ int print_octal(va_list lista)
 	}
 	return (c);
 }
+
+/**
+ *ft_atoi - extract the number to integer
+ *@str: string input
+ *Return: number int
+ */
+int ft_atoi(const char *str)
+{
+	int result = 0;
+	int sign = 1;
+	int digit;
+	if (*str == '-')
+	{
+		sign = -1;
+		++str;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		result = result * 10;
+		digit = *str - '0';
+		result = result + (digit * sign);
+		++str;
+	}
+	return (result);
+}
+
+/**
+ * print_hex - Converts decimal to uppercase hexadecimal
+ * @n: The number to be converted
+ *
+ * Return: The number of digits printed
+ */
+int print_hex(va_list list)
+{
+	int n;
+	n = ft_atoi(va_arg(list, *char));
+	char hex_digits[] = "0123456789abcdef";
+	if (n >= 16)
+		print_hex(n / 16);
+	write(1, &hex_digits[n % 16], 1);
+}

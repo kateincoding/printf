@@ -7,7 +7,7 @@
 #include <limits.h>
 
 /* #define INT_MAX 2147483647 */
-
+/*fff*/
 /**
  * struct Ftype - Struct operator
  *
@@ -39,6 +39,7 @@ int print_unsigned(va_list lista);
 /* print bases */
 int print_octal(va_list lista);
 int print_rot13(va_list lista);
+int print_hex(va_list lista);
 
 /* functions from standar library in f_library like putchar and others*/
 int _putchar(char c);
