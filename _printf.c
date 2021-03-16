@@ -2,7 +2,7 @@
 
 int validate_operator(char format)
 {
-	char operator[] = {'c', 's', 'd', 'i', 'R', '%', '\0'};
+	char operator[] = {'c', 's', 'd', 'i', 'o', 'R', '%', '\0'};
 	int i = 0;
 
 	while (operator[i])
@@ -21,18 +21,18 @@ int validate_operator(char format)
  */
 int _printf(const char *format, ...)
 {
-    unsigned int i = 0, result = 0;
-    va_list list;
+	unsigned int i = 0, result = 0;
+	va_list list;
 
 	if (format == NULL)
-		return(-1);
+		return (-1);
 
-    va_start(list, format);
-    
-    while (format && format[i])
+	va_start(list, format);
+
+	while (format && format[i])
 	{
-        if (format[i] != '%')
-            result += _putchar(format[i]);
+		if (format[i] != '%')
+			result += _putchar(format[i]);
 		else
 		{
 			i++;
@@ -42,9 +42,9 @@ int _printf(const char *format, ...)
 				i++;
 			if (format[i] == '%')
 				result += _putchar(format[i]);
-			while(validate_operator(format[i]) == 0 && format[i] != '\n')
+			while (validate_operator(format[i]) == 0 && format[i] != '\n')
 				i++;
-			if(validate_operator(format[i]) == 1)
+			if (validate_operator(format[i]) == 1)
 			{
 				/*functions that search in structured list the operator and returns the function */
 				result += select_function(format[i], list);
@@ -52,8 +52,8 @@ int _printf(const char *format, ...)
 			else
 				result += _putchar(format[i]);
 		}
-        i++;
-    }
+		i++;
+	}
 	va_end(list);
 	return (result);
 }
