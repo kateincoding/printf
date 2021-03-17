@@ -20,6 +20,10 @@ i   prints an integer and takes in a decimal, hexadecimal, or octal type
 .br
 x, X   prints an integer converted into hexadecimal notation (both lowercase and uppercase)
 .br
+o   prints an integer into octal notation
+.br
+b   prints an integer into binary notation
+.br
 u   prints an unsigned integer
 .br
 .RE
