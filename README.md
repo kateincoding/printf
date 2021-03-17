@@ -37,6 +37,31 @@ Handle the following conversion specifiers:
   - [x] d
   - [x] i
 
+#### 2. Just because it's in print doesn't mean it's the gospel
+Create a man page for your function.
+
+#### 3. With a face like mine, I do better in print
+Handle the following custom conversion specifiers:
+  - [x] b: the unsigned int argument is converted to binary
+```
+alex@ubuntu:~/c/printf$ cat main.c
+#include "holberton.h"
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    _printf("%b\n", 98);
+    return (0);
+}
+alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic main.c
+alex@ubuntu:~/c/printf$ ./a.out
+1100010
+alex@ubuntu:~/c/printf$
+```
 ## File description
 ### [_printf.c](_printf.c)
 * Function that produces output according to a format.
