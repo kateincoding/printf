@@ -43,3 +43,4 @@ This file contains
 * int print_rev_str(va_list lista)
 * int print_Str_Ascii(va_list arg)
 ## [function_rot13.c](function_rot13.c)
+Encodes + 13 char
