@@ -90,6 +90,7 @@ int print_Str_Ascii(va_list arg)
 			_putchar(s[c]);
 			i++;
 		}
+		_putchar('\0');
 	}
-	return (i - 1);
+	return (i);
 }
