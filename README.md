@@ -26,6 +26,8 @@ The main goal of this project is to replicate the funcionality of printf
 ## [function_binary.c](function_binary.c)
 * Converts unsigned int argument to binary.
 ## [functions_number.c](functions_number.c)
-* This file contains both print_int and print_unsigned functions
+This file contains
+* int print_int(va_list lista)
+* int print_unsigned(va_list lista)
 **[_printf.c](_printf.c)** - Function that produces output according to a format.
 **[_printf.c](_printf.c)** - Function that produces output according to a format.
