@@ -91,5 +91,5 @@ int print_Str_Ascii(va_list arg)
 			i++;
 		}
 	}
-	return (i);
+	return (i - 1);
 }
