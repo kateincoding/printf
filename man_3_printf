@@ -26,6 +26,7 @@ b   prints an integer into binary notation
 .br
 u   prints an unsigned integer
 .br
+p   prints the address
 .RE
 
 .SH RETURN
