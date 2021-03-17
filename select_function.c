@@ -18,7 +18,9 @@ int select_function(char format, va_list list)
 			{'u', print_unsigned},
 			{'o', print_octal},
 			{'x', print_hex},
+			{'X', print_HEX},
 			{'b', print_bin},
+			{'S', print_Str_Ascii},
 			{'r', print_rev_str},
 			{'R', print_rot13},
 			{'\0', NULL}};

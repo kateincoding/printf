@@ -35,42 +35,67 @@ int print_octal(va_list lista)
 }
 
 /**
- *ft_atoi - extract the number to integer
- *@str: string input
- *Return: number int
- */
-int ft_atoi(const char *str)
-{
-	int result = 0;
-	int sign = 1;
-	int digit;
-	if (*str == '-')
-	{
-		sign = -1;
-		++str;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10;
-		digit = *str - '0';
-		result = result + (digit * sign);
-		++str;
-	}
-	return (result);
-}
-
-/**
- * print_hex - Converts decimal to uppercase hexadecimal
+ * print_hexadecimal - Converts decimal to uppercase hexadecimal
  * @n: The number to be converted
  *
  * Return: The number of digits printed
  */
-int print_hex(va_list list)
+int	print_hexadecimal(unsigned int n)
 {
-	int n;
-	n = ft_atoi(va_arg(list, *char));
+	int counter = 0;
 	char hex_digits[] = "0123456789abcdef";
+
 	if (n >= 16)
-		print_hex(n / 16);
+	{
+		counter++;
+		print_hexadecimal(n / 16);
+	}
 	write(1, &hex_digits[n % 16], 1);
+	return (counter);
+}
+
+/**
+ * print_HEXADECIMAL - Converts decimal to uppercase hexadecimal
+ * @n: The number to be converted
+ *
+ * Return: The number of digits printed
+ */
+int	print_HEXADECIMAL(unsigned int n)
+{
+	int counter = 0;
+	char hex_digits[] = "0123456789ABCDEF";
+
+	if (n >= 16)
+	{
+		counter++;
+		print_HEXADECIMAL(n / 16);
+	}
+	write(1, &hex_digits[n % 16], 1);
+	return (counter);
+}
+
+/**
+ * print_hex - Converts decimal to uppercase hexadecimal
+ * @lista: The number of list to be converted
+ *
+ * Return: The number of digits printed
+ */
+int print_hex(va_list lista)
+{
+	unsigned int n = va_arg(lista, int);
+
+	return (print_hexadecimal(n));
+}
+
+/**
+ * print_HEX - Converts decimal to uppercase hexadecimal
+ * @lista: The number of list to be converted
+ *
+ * Return: The number of digits printed
+ */
+int print_HEX(va_list lista)
+{
+	unsigned int n = va_arg(lista, int);
+
+	return (print_HEXADECIMAL(n));
 }

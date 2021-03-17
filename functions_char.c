@@ -63,13 +63,12 @@ int print_rev_str(va_list lista)
 }
 
 /**
-* _print_String - Print a string
+* print_Str_Ascii - Print a string
 * @arg: String address
 * Return: integer
 */
-int print_Str_ASC(va_list arg)
+int print_Str_Ascii(va_list arg)
 {
-
 	char *s = va_arg(arg, char *);
 	int c, i = 0;
 

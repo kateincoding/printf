@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <limits.h>
 
-/* #define INT_MAX 2147483647 */
+#define _INT_MAX_ 2147483647
 /*fff*/
 /**
  * struct Ftype - Struct operator
@@ -29,6 +29,7 @@ int select_function(char format, va_list list);
 int print_char(va_list lista);
 int print_str(va_list lista);
 int print_rev_str(va_list lista);
+int print_Str_Ascii(va_list arg);
 
 /* print functions : type numbers */
 int putN(unsigned int n, unsigned int b, char *nums);
@@ -40,9 +41,11 @@ int print_unsigned(va_list lista);
 int print_octal(va_list lista);
 int print_rot13(va_list lista);
 int print_hex(va_list lista);
+int print_HEX(va_list lista);
 
 /* functions from standar library in f_library like putchar and others*/
 int _putchar(char c);
 int _strlen(char *s);
+int _atoi(char *str);
 
 #endif

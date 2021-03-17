@@ -7,7 +7,8 @@
  */
 int validate_operator(char format)
 {
-	char operator[] = {'c', 's', 'd', 'i', 'u', 'x', 'o', 'r', 'R', 'b', '%'};
+	char operator[] = {'c', 's', 'd', 'i', 'u', 'x',
+						 'X', 'S', 'o', 'r', 'R', 'b', '%'};
 	int i = 0;
 
 	while (operator[i])
