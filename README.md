@@ -36,4 +36,9 @@ This file contains
 * int	print_HEXADECIMAL(unsigned int n)
 * int print_hex(va_list lista)
 * int print_HEX(va_list lista)
-**[_printf.c](_printf.c)** - Function that produces output according to a format.
+## [functions_char.c](functions_char.c)
+This file contains
+* int print_char(va_list lista)
+* int print_str(va_list lista)
+* int print_rev_str(va_list lista)
+* int print_Str_Ascii(va_list arg)
