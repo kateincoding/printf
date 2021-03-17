@@ -3,11 +3,35 @@
 printf - prints the character(s)
 .SH SYNOPSIS
 #include "holberton.h"
-
 int _printf(const char *format, ...);
+
 .SH DESCRIPTION
 The printf function creates an output of a character string in
 accordance to a specific format required.
+
+.RS 3
+c   prints a character variable
+.br
+s   prints a string variable
+.br
+d   prints an integer and takes an integer value as a signed decimal integer
+.br
+i   prints an integer and takes in a decimal, hexadecimal, or octal type
+.br
+x, X   prints an integer converted into hexadecimal notation (both lowercase and uppercase)
+.br
+o   prints an integer into octal notation
+.br
+b   prints an integer into binary notation
+.br
+u   prints an unsigned integer
+.br
+p   prints the address
+.br
+r   prints a string in reverse
+.br
+R   prints a string converted into rot13
+.RE
 
 .SH RETURN
 The function will return the characters printed. If unsuccessful the function will return null.
