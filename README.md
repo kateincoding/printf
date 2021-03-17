@@ -18,7 +18,8 @@ The main goal of this project is to replicate the funcionality of printf
 * Don’t forget to push your header file
 * All your header files should be include guarded
 * Note that we will not provide the _putchar function for this project
-
+## How to solve?
+**See workflow about printf replicate  [HERE](https://app.diagrams.net/#Hkateincoding%2Fprintf%2Fmaster%2Fprintf.drawio)
 ## Tasks
 ### Mandatory
 
