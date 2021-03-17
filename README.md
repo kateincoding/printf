@@ -52,3 +52,7 @@ This function writes a char to stdout
 Contains the function prototypes implemented in the project
 ### [man_3_printf.c](man_3_printf.c)
 Manual of the project
+
+## Authors
+[Github - Katherine Soto] (https://github.com/kateincoding)
+[Github - Octavio Lafourcade] (https://github.com/tavolafourcade)
