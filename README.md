@@ -21,7 +21,9 @@ The main goal of this project is to replicate the funcionality of printf
 
 ## Tasks
 ### Mandatory
-## [_printf.c](_printf.c)
+
+## File description
+### [_printf.c](_printf.c)
 * Function that produces output according to a format.
 ## [function_binary.c](function_binary.c)
 * Converts unsigned int argument to binary.
@@ -44,3 +46,4 @@ This file contains
 * int print_Str_Ascii(va_list arg)
 ## [function_rot13.c](function_rot13.c)
 Encodes + 13 char
+
