@@ -21,8 +21,11 @@ The main goal of this project is to replicate the funcionality of printf
 
 ## Tasks
 ### Mandatory
-**[_printf.c](_printf.c)** - Function that produces output according to a format.
-**[function_binary.c](function_binary.c)** - Converts unsigned int argument to binary.
-**[_printf.c](_printf.c)** - Function that produces output according to a format.
+## [_printf.c](_printf.c)
+* Function that produces output according to a format.
+## [function_binary.c](function_binary.c)
+* Converts unsigned int argument to binary.
+## [functions_number.c](functions_number.c)
+* This file contains both print_int and print_unsigned functions
 **[_printf.c](_printf.c)** - Function that produces output according to a format.
 **[_printf.c](_printf.c)** - Function that produces output according to a format.
