@@ -32,7 +32,10 @@ Write a function that produces output according to a format.
   - [x] s
   - [x] %
 
-
+#### 1. Education is when you read the fine print. Experience is what you get if you don't
+Handle the following conversion specifiers:
+  - [x] d
+  - [x] i
 
 ## File description
 ### [_printf.c](_printf.c)
