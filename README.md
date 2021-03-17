@@ -25,25 +25,26 @@ The main goal of this project is to replicate the funcionality of printf
 ## File description
 ### [_printf.c](_printf.c)
 * Function that produces output according to a format.
-## [function_binary.c](function_binary.c)
+### [function_binary.c](function_binary.c)
 * Converts unsigned int argument to binary.
-## [functions_number.c](functions_number.c)
+### [functions_number.c](functions_number.c)
 This file contains
 * int print_int(va_list lista)
 * int print_unsigned(va_list lista)
-## [functions_bases.c](functions_bases.c)
+### [functions_bases.c](functions_bases.c)
 This file contains
 * int print_octal(va_list lista)
 * int	print_hexadecimal(unsigned int n)
 * int	print_HEXADECIMAL(unsigned int n)
 * int print_hex(va_list lista)
 * int print_HEX(va_list lista)
-## [functions_char.c](functions_char.c)
+### [functions_char.c](functions_char.c)
 This file contains
 * int print_char(va_list lista)
 * int print_str(va_list lista)
 * int print_rev_str(va_list lista)
 * int print_Str_Ascii(va_list arg)
-## [function_rot13.c](function_rot13.c)
+### [function_rot13.c](function_rot13.c)
 Encodes + 13 char
-
+### [_putchar.c](_putchar_.c)
+This function writes a char to stdout
