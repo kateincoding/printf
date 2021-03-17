@@ -29,6 +29,8 @@ u   prints an unsigned integer
 p   prints the address
 .br
 r   prints a string in reverse
+.br
+R   prints a string converted into rot13
 .RE
 
 .SH RETURN
