@@ -47,5 +47,6 @@ int print_HEX(va_list lista);
 int _putchar(char c);
 int _strlen(char *s);
 int _atoi(char *str);
+int	print_HEXADECIMAL(unsigned int n);
 
 #endif
