@@ -50,3 +50,5 @@ Encodes + 13 char
 This function writes a char to stdout
 ### [holberton.c](holberton.c)
 Contains the function prototypes implemented in the project
+### [man_3_printf.c](man_3_printf.c)
+Manual of the project
