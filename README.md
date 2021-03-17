@@ -29,5 +29,11 @@ The main goal of this project is to replicate the funcionality of printf
 This file contains
 * int print_int(va_list lista)
 * int print_unsigned(va_list lista)
-**[_printf.c](_printf.c)** - Function that produces output according to a format.
+## [functions_bases.c](functions_bases.c)
+This file contains
+* int print_octal(va_list lista)
+* int	print_hexadecimal(unsigned int n)
+* int	print_HEXADECIMAL(unsigned int n)
+* int print_hex(va_list lista)
+* int print_HEX(va_list lista)
 **[_printf.c](_printf.c)** - Function that produces output according to a format.
