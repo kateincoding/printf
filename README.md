@@ -54,5 +54,5 @@ Contains the function prototypes implemented in the project
 Manual of the project
 
 ## Authors
-[Github - Katherine Soto] (https://github.com/kateincoding)
-[Github - Octavio Lafourcade] (https://github.com/tavolafourcade)
+[Github - Katherine Soto](https://github.com/kateincoding)
+[Github - Octavio Lafourcade](https://github.com/tavolafourcade)
