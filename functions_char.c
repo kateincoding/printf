@@ -81,6 +81,9 @@ int print_Str_Ascii(va_list arg)
 		{
 			_putchar('\\');
 			_putchar('x');
+			print_HEXADECIMAL(s[c] / 16);
+			print_HEXADECIMAL(s[c] % 16);
+			i = 3;
 		}
 		else
 		{
