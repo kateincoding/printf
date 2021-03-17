@@ -46,5 +46,7 @@ This file contains
 * int print_Str_Ascii(va_list arg)
 ### [function_rot13.c](function_rot13.c)
 Encodes + 13 char
-### [_putchar.c](_putchar_.c)
+### [_putchar.c](_putchar.c)
 This function writes a char to stdout
+### [holberton.c](holberton.c)
+Contains the function prototypes implemented in the project
