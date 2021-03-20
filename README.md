@@ -1,7 +1,8 @@
-# 0x11. C - printf
+# Printf
 
 ## Overview of the project
-The main goal of this project is to replicate the funcionality of printf
+The main goal of this project is to replicate the funcionality of printf: prints a string with conversion specifiers!
+Prototype: int _printf(const char *format, ...);
 
 ## Requirements
 
