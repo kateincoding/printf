@@ -46,11 +46,8 @@ int	print_hexadecimal(unsigned int n)
 	char hex_digits[] = "0123456789abcdef";
 
 	if (n >= 16)
-	{
-		counter++;
-		print_hexadecimal(n / 16);
-	}
-	write(1, &hex_digits[n % 16], 1);
+		counter += print_hexadecimal(n / 16);
+	counter += _putchar(hex_digits[n % 16]);
 	return (counter);
 }
 
@@ -67,10 +64,9 @@ int	print_HEXADECIMAL(unsigned int n)
 
 	if (n >= 16)
 	{
-		counter++;
-		print_HEXADECIMAL(n / 16);
+		counter += print_HEXADECIMAL(n / 16);
 	}
-	write(1, &hex_digits[n % 16], 1);
+	counter += write(1, &hex_digits[n % 16], 1);
 	return (counter);
 }
 
